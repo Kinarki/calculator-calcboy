@@ -23,7 +23,7 @@ body{
     padding: 0;
 }
 
-.display-outter {
+.display-outer {
     height: 80%;
     width: 80%;
     margin: 10% 10% 0;
@@ -43,6 +43,10 @@ body{
     position: relative;
 }
 
+.output {
+    float: right;
+    font-size: 2em;
+}
 .operands {
     margin-left: 5%;
 }
@@ -64,21 +68,36 @@ button{
 }
 
 section {
-    width: 25%;
-    margin: 0;
     display: inline-block;
 }
 
-.ors {
-    clear: both;
+.ope, .rat {
+    width: 40%;
+    margin: 0;
 }
 
 .rat {
     float: right;
+    margin-top: 10%;
+    transform: rotateZ(-45deg);
+}
+
+.d-pad {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.b-button {
+    width: 35%;
+}
+
+.ors {
+    width: 30%;
+    margin-left: 15%;
 }
 
 .select, .start {
-    width: 50%;
+    width: 35%;
 }
 
 .vent {
@@ -86,7 +105,5 @@ section {
     height: auto;
     float: right;
     clear: both;
-    bottom: 0;
-    right: 0;
     margin: 4% 4% 0 0;
 }
