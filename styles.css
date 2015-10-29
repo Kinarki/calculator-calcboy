@@ -47,8 +47,14 @@ body{
     float: right;
     font-size: 2em;
 }
+
 .operands {
     margin-left: 5%;
+}
+
+.logo {
+    width: 55%;
+    margin: 1% 0 0 8%;
 }
 
 .operands button {
@@ -92,12 +98,24 @@ section {
 }
 
 .ors {
-    width: 30%;
-    margin-left: 15%;
+    /*width: 40%;*/
+    margin-left: 30%;
+}
+
+.clear {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+}
+
+.tilt {
+    transform: rotateZ(-30deg);
+    display: inline-block;
 }
 
 .select, .start {
-    width: 35%;
+    width: 50%;
 }
 
 .vent {
