@@ -1,11 +1,13 @@
 body{
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
 .container{
     background-color: #dbdad8;
-    width: 450px;
-    height: 700px;
+    width: 25%;
+    height: 80%;
     border-radius: 3% 3% 20% 3%;
     position: relative;
     margin-left: 35%;
@@ -61,14 +63,30 @@ button{
     border: none;
 }
 
-.ope .rat .ors {
+section {
     width: 25%;
-}
-
-.rat {
-    clear: both;
+    margin: 0;
+    display: inline-block;
 }
 
 .ors {
+    clear: both;
+}
+
+.rat {
     float: right;
+}
+
+.select, .start {
+    width: 50%;
+}
+
+.vent {
+    width: 33%;
+    height: auto;
+    float: right;
+    clear: both;
+    bottom: 0;
+    right: 0;
+    margin: 4% 4% 0 0;
 }

@@ -1,3 +1,6 @@
-/**
- * Created by nickf_000 on 10/28/2015.
- */
+var my_calculator = new calculator(calcFunction);
+
+
+function calcFunction(type, value, item){
+
+}
