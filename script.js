@@ -6,13 +6,16 @@ var result;
 
 function input_digit(number) {
     num_array[i] += number;
-    $('#output').text(num_array.join(' '));
+    refresh_display();
 }
 
+function refresh_display() {
+    $('#output').text(num_array.join(' '));
+}
 function increment_array(oper) {
     i++;
     num_array.push(oper);
-    $('#output').text(num_array.join(' '));
+    refresh_display();
     i++;
     num_array.push('');
 }
@@ -42,10 +45,10 @@ function doMath(){
 
 function clearLast() {
     var temp = num_array.join(' ');
-    var temp = temp.substring(0, temp.length-1);
-    num_array = temp.split(' ');
+    var tempo = temp.substring(0, temp.length-1);
+    num_array = tempo.split(' ');
     i = num_array.length-1;
-    $('#output').text(temp);
+    $('#output').text(tempo);
 }
 
 function clearEverything() {
@@ -56,7 +59,8 @@ function clearEverything() {
 }
 
 function decimalPoint() {
-    $('#output').text(num_array[i] += '.');
+    num_array[i] += '.';
+    refresh_display();
 }
 
 
