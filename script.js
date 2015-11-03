@@ -39,15 +39,6 @@ $(document).ready(function(){
     });
 });
 
-//function doMath(){
-//    var temp_array = num_array.join(' ');
-//    result = eval(temp_array);
-//    $('#output').text(result);
-//    num_array = [''];
-//    i = 0;
-//    num_array[i] += result;
-//}
-
 function clearLast() {
     var temp = num_array.join(' ');
     var tempo = temp.substring(0, temp.length-1);
@@ -74,7 +65,7 @@ function decimalPoint() {
 
 
 function doMaths () {
-    for (var i = 0; i < num_array.length; i++) {
+    for (i = 0; i < num_array.length; i++) {
         if (isNaN(num_array[i])) {
             if (op == null) {
                 op = num_array[i];
@@ -83,7 +74,7 @@ function doMaths () {
 
                 result = calculate(num1, num2, op);
 
-                num_array[i -1] = result;
+                num_array[i - 1] = result;
                 num_array.splice(i,2);
 
                 refreshDisplay();
