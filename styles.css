@@ -1,0 +1,109 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: #dbdad8;
+    width: 25%;
+    height: 80%;
+    border-radius: 3% 3% 20% 3%;
+    position: relative;
+    margin-left: 35%;
+    border: 1px solid gray;
+}
+
+.display-container {
+    width: 99%;
+    height: 45%;
+    position: relative;
+    border-radius: 3%;
+    margin: 0;
+    padding: 0;
+}
+
+.display-outer {
+    height: 80%;
+    width: 80%;
+    margin: 10% 10% 0;
+    border-radius: 5% 5% 20%;
+    background-color: #525460;
+    padding-top: 3%;
+    position: relative;
+}
+
+.display-inner {
+    width: 70%;
+    height: 75%;
+    border-radius: 1%;
+    margin: 7% 0 0 15%;
+    background-color: #4F6415;
+    border: 1px solid black;
+    position: relative;
+}
+
+.output {
+    float: right;
+    font-size: 2em;
+}
+.operands {
+    margin-left: 5%;
+}
+
+.operands button {
+    padding: 2% 3%;
+}
+
+button{
+    color: #202B87;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.ope button{
+    color: #dbdad8;
+    background-color: black;
+    border: none;
+}
+
+section {
+    display: inline-block;
+}
+
+.ope, .rat {
+    width: 40%;
+    margin: 0;
+}
+
+.rat {
+    float: right;
+    margin-top: 10%;
+    transform: rotateZ(-45deg);
+}
+
+.d-pad {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.b-button {
+    width: 35%;
+}
+
+.ors {
+    width: 30%;
+    margin-left: 15%;
+}
+
+.select, .start {
+    width: 35%;
+}
+
+.vent {
+    width: 33%;
+    height: auto;
+    float: right;
+    clear: both;
+    margin: 4% 4% 0 0;
+}
