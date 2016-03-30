@@ -116,11 +116,11 @@ button:focus {
 
 .divide {
     float: right;
-    margin-right: 8%;
+    margin-right: 13%;
 }
 
 .multiply {
-    margin: 13% 4% 4% 0;
+    margin: 13% 0 4% 0;
 }
 
 section {
@@ -185,3 +185,39 @@ section {
     right: 10px;
 }
 
+.operator {
+    position: relative;
+    perspective: 200px;
+    transition: 0.2s ease-in-out;
+}
+
+.shift-up {
+    transform: rotateX(35deg);
+}
+
+.shift-right {
+    transform: rotateY(35deg);
+}
+
+.shift-down {
+    transform: rotateX(-35deg);
+}
+
+.shift-left {
+    transform: rotateY(-35deg);
+}
+
+.alert-output, .alert-enter {
+    position: absolute;
+    color: red;
+    width: 100%;
+    height: 20px;
+}
+
+.alert-enter {
+    margin: 0 4%;
+}
+
+.alert-output {
+    margin: 2% 13%;
+}
