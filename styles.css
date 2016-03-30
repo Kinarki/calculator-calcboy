@@ -116,11 +116,11 @@ button:focus {
 
 .divide {
     float: right;
-    margin-right: 8%;
+    margin-right: 13%;
 }
 
 .multiply {
-    margin: 13% 4% 4% 0;
+    margin: 13% 0 4% 0;
 }
 
 section {
@@ -183,5 +183,27 @@ section {
     position: absolute;
     bottom: 7px;
     right: 10px;
+}
+
+.operator {
+    position: relative;
+    perspective: 200px;
+    transition: 0.2s ease-in-out;
+}
+
+.shift-up {
+    transform: rotateX(35deg);
+}
+
+.shift-right {
+    transform: rotateY(35deg);
+}
+
+.shift-down {
+    transform: rotateX(-35deg);
+}
+
+.shift-left {
+    transform: rotateY(-35deg);
 }
 

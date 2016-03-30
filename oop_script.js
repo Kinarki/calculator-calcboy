@@ -226,6 +226,12 @@
         // setting up buttons for click, keypress and keydown
         $('button').click(function(){
             var value = $(this).val();
+            var operator = function(target, className) {
+                $(target).addClass(className);
+                setTimeout(function() {
+                    $(target).removeClass(className)
+                }, 200);
+            };
 
             switch(value) {
 
@@ -240,10 +246,22 @@
                 case '8':
                 case '9':
                 case '.':
+                    infoHandler.inputDigit(value);
+                    break;
                 case '*':
+                    operator('.ope', 'shift-down');
+                    infoHandler.inputDigit(value);
+                    break;
                 case '/':
+                    operator('.ope', 'shift-right');
+                    infoHandler.inputDigit(value);
+                    break;
                 case '+':
+                    operator('.ope', 'shift-up');
+                    infoHandler.inputDigit(value);
+                    break;
                 case '-':
+                    operator('.ope', 'shift-left');
                     infoHandler.inputDigit(value);
                     break;
 
