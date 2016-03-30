@@ -1,7 +1,7 @@
 (function() {
 
     // handles calculations and array manipulation
-    var Calculation = function(array, infoHandler) {
+    var Calculation = function() {
         var calc = this;
 
         // multiply method
@@ -16,7 +16,7 @@
             if(num2 === '0') {
 
                 // alert to let the user know they can't divide by 0
-                alert('Can\'t divide by 0.  You are messing with dark forces you can\'t even begin to comprehend');
+                $('.alert-enter').text('Can\'t divide by 0.  You are messing with dark forces you can\'t even begin to comprehend');
 
                 // clear array
                 array = [''];
@@ -123,7 +123,7 @@
 
 
     // handles information manipulation
-    var Info_handler = function (calculator) {
+    var Info_handler = function () {
         var info = this;
         var num_array = [''];
 
@@ -195,7 +195,7 @@
 
                 // alert user not able to input two consecutive operators
                 else {
-                    alert('Can\'t add an operator yet.');
+                    $('.alert-output').text('Enter a number before another operator');
                 }
             }
 
@@ -225,6 +225,8 @@
 
         // setting up buttons for click, keypress and keydown
         $('button').click(function(){
+            $('.alert-output').text('');
+            $('.alert-enter').text('');
             var value = $(this).val();
             var operator = function(target, className) {
                 $(target).addClass(className);
