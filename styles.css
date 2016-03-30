@@ -1,4 +1,4 @@
-body, html{
+body {
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -141,6 +141,7 @@ section {
     border: none;
     background: none;
     padding: 0;
+    width: 66px;
 }
 
 .b-button>img {
@@ -149,7 +150,7 @@ section {
 }
 
 .ors {
-    margin: -4% 0 0 26%;
+    margin: -8% 0 0 26%;
 }
 
 .ors img {
@@ -161,6 +162,7 @@ section {
     margin: 0;
     border: none;
     background: none;
+    width: 60px;
 }
 
 .clear span {
@@ -169,7 +171,7 @@ section {
 
 .tilt {
     transform: rotateZ(-30deg);
-    display: inline-block
+    display: inline-block;
 }
 
 .select, .start {
@@ -182,3 +184,4 @@ section {
     bottom: 7px;
     right: 10px;
 }
+
