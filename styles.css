@@ -151,6 +151,8 @@ section {
 
 .ors {
     margin: -8% 0 0 26%;
+    z-index: 3;
+    position: relative;
 }
 
 .ors img {

@@ -172,11 +172,25 @@
         // method used to set up array
         info.inputDigit = function(character) {
 
-            // checking for numbers 0-9 and decimal
-            if (character >= 0 && character <= 9 || character === '.') {
+            // checking for numbers 0-9
+            if (character >= 0 && character <= 9) {
 
                 // while true concats digits and decimal with previous index
                 num_array[num_array.length - 1] += character;
+            }
+
+            // handling decimal
+            else if (character === '.') {
+
+                // checking if no decimals are present in the current string
+                if (num_array[num_array.length - 1].indexOf('.') === -1) {
+                    // while true concats decimal with previous index
+                    num_array[num_array.length - 1] += character;
+                }
+                else {
+                    // error to handle too many decimals
+                    $('.alert-enter').text('I am unable to add another decimal point, Dave.');
+                }
             }
 
             // checking for operators
@@ -225,10 +239,15 @@
 
         // setting up buttons for click, keypress and keydown
         $('button').click(function(){
+            // clear the alert text when user enters a correct input
             $('.alert-output').text('');
             $('.alert-enter').text('');
+
+            // targeting the HTML property obtaining the button pressed to be passed to infoHandler
             var value = $(this).val();
-            var operator = function(target, className) {
+
+            // method to dynamically animate the dpad image based on user input
+            var animation = function(target, className) {
                 $(target).addClass(className);
                 setTimeout(function() {
                     $(target).removeClass(className)
@@ -248,22 +267,24 @@
                 case '8':
                 case '9':
                 case '.':
+                    // passes the value to be sorted by infoHandler
                     infoHandler.inputDigit(value);
                     break;
                 case '*':
-                    operator('.ope', 'shift-down');
+                    // animation arguments ( HTML target, CSS class )
+                    animation('.ope', 'shift-down');
                     infoHandler.inputDigit(value);
                     break;
                 case '/':
-                    operator('.ope', 'shift-right');
+                    animation('.ope', 'shift-right');
                     infoHandler.inputDigit(value);
                     break;
                 case '+':
-                    operator('.ope', 'shift-up');
+                    animation('.ope', 'shift-up');
                     infoHandler.inputDigit(value);
                     break;
                 case '-':
-                    operator('.ope', 'shift-left');
+                    animation('.ope', 'shift-left');
                     infoHandler.inputDigit(value);
                     break;
 
